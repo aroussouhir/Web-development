@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Articles | BuyingBike{% endblock %}
+
+{% block body %}
+
+<section class="articles">
+
+{% for article in articles  %}
+<article>
+</br>
+<h2>{{ article.title }}</h2>
+
+<div class="metadata">Ajouté  le {{ article.createdAt | date('d/m/Y') }} 
+à {{ article.createdAt | date('H:i') }} </div>
+
+<div class="contenu">
+<img src="{{ article.image }}" alt="">
+</br>
+{{ article.contenu | raw }}
+</br>
+<a href="{{ path('test_show', {'id': article.id}) }}" class="btn btn-success">Lire la suite</a>
+</br>
+</div>
+</article>
+{% endfor %}
+
+</section>
+
+{% endblock %}

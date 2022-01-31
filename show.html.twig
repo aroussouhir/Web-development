@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ article.title }} | BuyingBike{% endblock %}
+
+{% block body %}
+</br>
+<article>
+<h2> {{ article.title }} </h2>
+</br>
+
+<div class="metadata">Ajouté  le {{ article.createdAt | date('d/m/Y') }} 
+à {{ article.createdAt | date('H:i') }} </div>
+
+<div class="contenu">
+<img src="{{ article.image }}" alt=""> 
+</br>
+{{ article.contenu | raw }}
+</br>
+</div>
+
+<a href="{{ path('modif', {'id': article.id}) }}" class="btn btn-success">Modifier</a>
+
+</article>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modification d'un article | BuyingBike{% endblock %}
+
+{% form_theme formArticle 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+</br>
+<h1>Modification de l'article </h1>
+
+{{ form_start(formArticle) }}
+
+{{ form_row(formArticle.title, {'attr': {'placeholder': "Titre essai" }}) }}
+
+{{ form_row(formArticle.contenu, {'attr': {'placeholder': "Contenu essai" }}) }}
+
+{{ form_row(formArticle.image, {'attr': {'placeholder': "image essai" }}) }}
+
+<button type="submit" class="btn btn-success">Enregistrer</button>
+
+{{ form_end(formArticle) }}
+{% endblock %}

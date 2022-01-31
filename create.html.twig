@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajout d'un article | BuyingBike{% endblock %}
+
+{% block body %}
+
+</br>
+<h1>Création d'un article </h1>
+</br>
+<form action="" method="post">
+<h6>Titre :</h6>
+    <input type="text" name="title" placeholder="Ecrire ici .." size="180">
+</br>
+</br>
+<h6>Description :</h6>
+    <textarea name="contenu" placeholder="Ecrire ici .." rows="4" cols="182"></textarea>
+</br>
+</br>
+<h6>Image :</h6>
+    <input type="text" name="image" placeholder="URL de l'image" size="180">
+</br>
+</br>
+    <button type="submit" class="btn btn-success" >Ajouter </button>
+</form>
+
+{% endblock %}
